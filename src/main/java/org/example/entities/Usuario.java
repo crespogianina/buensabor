@@ -2,11 +2,12 @@ package org.example.entities;
 
 import lombok.*;
 
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Setter
 @Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Builder
 
 public class Usuario {
     private String auth0Id;

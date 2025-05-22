@@ -4,11 +4,12 @@ import lombok.*;
 
 import java.time.LocalDate;
 
-@Builder
 @Setter
 @Getter
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 
 public class Cliente {
     private String nombre;
