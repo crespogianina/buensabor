@@ -1,6 +1,7 @@
-package org.example.entitiess;
+package org.example.entities;
 
 import lombok.*;
+import org.example.entities.Provincia;
 
 @Setter
 @Getter
