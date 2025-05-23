@@ -1,13 +1,10 @@
-package org.example;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+package org.example.entities;
+import lombok.*;
 
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Builder
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,18 +16,7 @@ public class Categoria {
     private Categoria categoriaPadre;
     private Set<Articulo> articulos;
 
-    /*public Categoria(String denominacion) {
-        this.denominacion = denominacion;
-    }
 
-    public Categoria(Categoria categoriaPadre, String denominacion) {
-        this.categoriaPadre = categoriaPadre;
-        this.denominacion = denominacion;
-    }
-
-    public Categoria() {
-    }
-*/
 
     public void addSubcategoria(Categoria subcategoria) {
         if (this.subcategorias == null) {
@@ -56,30 +42,7 @@ public class Categoria {
         }
     }
 
-/*    public String getDenominacion() {
-        return denominacion;
-    }
 
-    public void setDenominacion(String denominacion) {
-        this.denominacion = denominacion;
-    }
-
-    public Set<Categoria> getSubcategorias() {
-        return subcategorias;
-    }
-
-    public void setSubcategorias(Set<Categoria> subcategorias) {
-        this.subcategorias = subcategorias;
-    }
-
-    public Categoria getCategoriaPadre() {
-        return categoriaPadre;
-    }
-
-    public void setCategoriaPadre(Categoria categoriaPadre) {
-        this.categoriaPadre = categoriaPadre;
-    }
-    */
 
 
     public void addArticulo(Articulo articulo){

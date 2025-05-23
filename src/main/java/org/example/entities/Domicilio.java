@@ -13,5 +13,5 @@ public class Domicilio {
     private String calle;
     private Integer numero;
     private Integer cp;
-    private org.example.entitiess.Localidad localidad;
+    private Localidad localidad;
 }

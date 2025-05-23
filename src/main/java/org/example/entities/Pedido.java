@@ -36,8 +36,8 @@ public class Pedido {
 
     public void calcularTotal() {
         for (DetallePedido detalle : detallePedido) {
-            double subTotal = detalle.getSubtotal();
-            this.total += detalle.getSubtotal();
+            double subTotal = detalle.getSubTotal();
+            this.total += subTotal;
         }
     }
 }
