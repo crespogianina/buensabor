@@ -1,6 +1,8 @@
 package org.example.entities;
+
 import lombok.*;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Setter
@@ -17,4 +19,12 @@ public class Empresa {
     private Integer cuil;
     private Set<Sucursal> sucursales;
 
+    public void addSucursal(Sucursal sucursal) {
+        if (this.sucursales == null) this.sucursales = new HashSet<>();
+        this.sucursales.add(sucursal);
+    }
+
+    public void removeSucursal(Sucursal sucursal) {
+        this.sucursales.remove(sucursal);
+    }
 }
