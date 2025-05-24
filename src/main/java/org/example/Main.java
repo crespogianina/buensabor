@@ -184,6 +184,8 @@ public class Main {
 
         pedido1.setSucursal(sucursal1);
         pedido2.setSucursal(sucursal3);
+        pedido1.setDomicilio(domicilio4);
+        pedido1.setDomicilio(domicilio2);
 
         //DETALLE PEDIDO
         DetallePedido detallePedido1 = DetallePedido.builder().cantidad(1).subTotal(1000).articulo(manufacturadoEmpJQ).build();
@@ -228,11 +230,13 @@ public class Main {
 
         cliente1.addPedidos(pedido1);
         cliente2.addPedidos(pedido2);
+        cliente1.addDomicilio(domicilio1);
+        cliente2.addDomicilio(domicilio2);
 
-        System.out.println("-----------------Usuario 1-----------------");
-        System.out.println(usuario1);
-        System.out.println("-----------------Usuario 2-----------------");
-        System.out.println(usuario2);
+        System.out.println("-----------------Cliente 1-----------------");
+        System.out.println(cliente1);
+        System.out.println("-----------------Cliente 2-----------------");
+        System.out.println(cliente2);
 
     }
 }

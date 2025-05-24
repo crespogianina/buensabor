@@ -8,7 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Builder
-
 public class Usuario {
     private String auth0Id;
     private String username;
