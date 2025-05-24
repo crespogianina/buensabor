@@ -12,6 +12,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Pedido {
     private LocalTime horaEstimadaFinalizacion;
     private double total;
@@ -35,9 +36,11 @@ public class Pedido {
     }
 
     public void calcularTotal() {
-        for (DetallePedido detalle : detallePedido) {
-            double subTotal = detalle.getSubTotal();
-            this.total += subTotal;
+        if (detallePedido != null) {
+            for (DetallePedido detalle : detallePedido) {
+                double subTotal = detalle.getSubTotal();
+                this.total += subTotal;
+            }
         }
     }
 }

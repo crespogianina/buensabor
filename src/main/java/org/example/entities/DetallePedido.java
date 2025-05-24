@@ -7,6 +7,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class DetallePedido {
     private Integer cantidad;
     private double subTotal;

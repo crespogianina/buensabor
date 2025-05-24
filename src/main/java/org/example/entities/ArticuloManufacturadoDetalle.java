@@ -7,12 +7,8 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class ArticuloManufacturadoDetalle {
 
     private Integer cantidad;
     private ArticuloInsumo insumo;
-
-
-
 }

@@ -1,8 +1,7 @@
 package org.example;
-import org.example.entities.*;
-import lombok.*;
 
-import java.sql.SQLOutput;
+import org.example.entities.*;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -28,7 +27,7 @@ public class Main {
         //LOCALIDAD
         Localidad localidad1 = Localidad.builder().nombre("Guaymallen").provincia(provincia1).build();
         Localidad localidad2 = Localidad.builder().nombre("Proviencia").provincia(provincia2).build();
-    
+
         //DOMICILIO
         Domicilio domicilio1 = Domicilio.builder().calle("Belgrano").numero(123).cp(5505).localidad(localidad1).build();
         Domicilio domicilio2 = Domicilio.builder().calle("Bolivar").numero(43).cp(204).localidad(localidad2).build();
@@ -95,10 +94,10 @@ public class Main {
                 .tiempoEstimadoMinutos(10).preparacion("Hornear a 200°C por 10 minutos").build();
 
         //ARTICULO MANUFACTURADO DETALLE
-        manufacturado1.addDetalle(3, insumo1harina);
-        manufacturado1.addDetalle(2, insumo11cervezacorona);
-        manufacturado2.addDetalle(1, insumo1harina);
-        manufacturado2.addDetalle(48, insumo11cervezacorona);
+        //manufacturado1.addDetalle(3, insumo1harina);
+        //manufacturado1.addDetalle(2, insumo11cervezacorona);
+        //manufacturado2.addDetalle(1, insumo1harina);
+        //manufacturado2.addDetalle(48, insumo11cervezacorona);
 
         //PEDIDO
         Pedido pedido1 = Pedido.builder().horaEstimadaFinalizacion(LocalTime.of(22, 0))

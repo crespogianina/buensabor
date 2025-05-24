@@ -1,6 +1,7 @@
 package org.example.entities;
 
 import java.time.LocalTime;
+
 import lombok.*;
 
 @Setter
@@ -9,7 +10,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
 public class Sucursal {
     private String nombre;
     private LocalTime horarioApertura;
