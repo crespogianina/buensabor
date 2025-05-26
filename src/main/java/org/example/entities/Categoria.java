@@ -1,17 +1,18 @@
 package org.example.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
 
-@Builder
+@SuperBuilder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Categoria {
+public class Categoria extends BaseEntidad {
 
     private String denominacion;
     private Set<Categoria> subcategorias;

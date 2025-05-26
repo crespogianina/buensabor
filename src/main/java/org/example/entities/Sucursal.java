@@ -5,10 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Setter
 @Getter
-@Builder
+@SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
