@@ -12,7 +12,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public abstract class Articulo {
+public abstract class Articulo extends BaseEntidad {
 
     protected String denominacion;
     protected Double precioVenta;

@@ -13,7 +13,7 @@ import java.util.Set;
 @AllArgsConstructor
 @ToString
 @Builder
-public class Promocion {
+public class Promocion extends BaseEntidad{
     private String denominacion;
     private LocalDate fechaDesde;
     private LocalDate fechaHasta;

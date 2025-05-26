@@ -12,7 +12,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Cliente {
+public class Cliente extends BaseEntidad{
     private String nombre;
     private String apellido;
     private String telefono;

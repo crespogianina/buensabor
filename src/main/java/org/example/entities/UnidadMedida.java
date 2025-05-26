@@ -8,6 +8,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class UnidadMedida {
+public class UnidadMedida extends BaseEntidad{
     private String denominacion;
 }

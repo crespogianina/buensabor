@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 
-public class Provincia {
+public class Provincia extends BaseEntidad{
     private String nombre;
     private Pais pais;
 }

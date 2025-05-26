@@ -12,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Sucursal {
+public class Sucursal extends BaseEntidad {
     private String nombre;
     private LocalTime horarioApertura;
     private LocalTime horarioCierre;
