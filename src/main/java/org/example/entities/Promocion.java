@@ -1,6 +1,7 @@
 package org.example.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -12,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Builder
+@SuperBuilder
 public class Promocion extends BaseEntidad{
     private String denominacion;
     private LocalDate fechaDesde;

@@ -1,9 +1,10 @@
 package org.example.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Setter
 @Getter
 @AllArgsConstructor
