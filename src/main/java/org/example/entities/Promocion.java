@@ -6,33 +6,40 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Builder
-public class Promocion {
+public class Promocion extends BaseEntidad{
     private String denominacion;
-    private LocalDate FechaDesde;
-    private LocalDate FechaHasta;
-    private LocalTime HoraDesde;
-    private LocalTime HoraHasta;
+    private LocalDate fechaDesde;
+    private LocalDate fechaHasta;
+    private LocalTime horaDesde;
+    private LocalTime horaHasta;
     private String descripcionDescuento;
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
-    private Set<Articulo> articulos = new HashSet<>();
-    private Set<ImagenPromocion> imagenes = new HashSet<>();
+    private Set<Articulo> articulos;
+    private Set<ImagenPromocion> imagenes;
 
-    public Promocion(String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion) {
-        this.denominacion = denominacion;
-        FechaDesde = fechaDesde;
-        FechaHasta = fechaHasta;
-        HoraDesde = horaDesde;
-        HoraHasta = horaHasta;
-        this.descripcionDescuento = descripcionDescuento;
-        this.precioPromocional = precioPromocional;
-        this.tipoPromocion = tipoPromocion;
+    public void addArticulo(Articulo articulo) {
+        if (this.articulos == null) this.articulos = new HashSet<>();
+        this.articulos.add(articulo);
     }
 
+    public void removeArticulo(Articulo articulo) {
+        this.articulos.remove(articulo);
+    }
+
+    public void addImagenPromocion(ImagenPromocion imagenPromocion) {
+        if (this.imagenes == null) this.imagenes = new HashSet<>();
+        this.imagenes.add(imagenPromocion);
+    }
+
+    public void removeImagenPromocion(ImagenPromocion imagenPromocion) {
+        this.imagenes.remove(imagenPromocion);
+    }
 }

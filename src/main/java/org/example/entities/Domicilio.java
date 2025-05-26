@@ -8,8 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-
-public class Domicilio {
+public class Domicilio extends BaseEntidad{
     private String calle;
     private Integer numero;
     private Integer cp;

@@ -6,6 +6,6 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class ImagenPromocion {
+public class ImagenPromocion extends BaseEntidad {
     private String denominacion;
 }

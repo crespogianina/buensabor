@@ -12,7 +12,8 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Pedido {
+@ToString
+public class Pedido extends BaseEntidad {
     private LocalTime horaEstimadaFinalizacion;
     private double total;
     private double totalCosto;
@@ -35,9 +36,11 @@ public class Pedido {
     }
 
     public void calcularTotal() {
-        for (DetallePedido detalle : detallePedido) {
-            double subTotal = detalle.getSubTotal();
-            this.total += subTotal;
+        if (detallePedido != null) {
+            for (DetallePedido detalle : detallePedido) {
+                double subTotal = detalle.getSubTotal();
+                this.total += subTotal;
+            }
         }
     }
 }

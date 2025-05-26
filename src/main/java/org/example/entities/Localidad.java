@@ -10,7 +10,8 @@ import org.example.entities.Provincia;
 @NoArgsConstructor
 @ToString
 
-public class Localidad {
+public class Localidad extends BaseEntidad {
     private String nombre;
     private Provincia provincia;
+
 }

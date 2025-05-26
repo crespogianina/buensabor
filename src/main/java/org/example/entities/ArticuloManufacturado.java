@@ -1,17 +1,17 @@
 package org.example.entities;
+
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@SuperBuilder
 
-@Builder
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 public class ArticuloManufacturado extends Articulo {
 
     private String descripcion;
@@ -20,22 +20,15 @@ public class ArticuloManufacturado extends Articulo {
     private Set<ArticuloManufacturadoDetalle> detalles;
 
 
-    public void addDetalle(Integer cantidad, ArticuloInsumo insumo) {
-        ArticuloManufacturadoDetalle detalle = new ArticuloManufacturadoDetalle(cantidad, insumo);
-        if (this.detalles == null){
+    public void addDetalle(ArticuloManufacturadoDetalle articuloManofacturadoDetalle) {
+        if (this.detalles == null) {
             this.detalles = new HashSet<ArticuloManufacturadoDetalle>();
         }
-        this.detalles.add(detalle);
-    }
-    public void addDetalle(ArticuloManufacturadoDetalle detalle) {
-        if (this.detalles == null){
-            this.detalles = new HashSet<ArticuloManufacturadoDetalle>();
-        }
-        this.detalles.add(detalle);
+        this.detalles.add(articuloManofacturadoDetalle);
     }
 
-    public void removeDetalle(ArticuloManufacturadoDetalle detalle){
+    public void removeDetalle(ArticuloManufacturadoDetalle detalle) {
         this.detalles.remove(detalle);
-    }
 
+    }
 }

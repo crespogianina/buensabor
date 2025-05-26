@@ -8,8 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @ToString
 @Builder
-
-public class Usuario {
+public class Usuario extends BaseEntidad{
     private String auth0Id;
     private String username;
 }
