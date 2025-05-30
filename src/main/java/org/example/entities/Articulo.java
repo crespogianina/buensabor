@@ -14,8 +14,8 @@ import java.util.Set;
 @ToString
 public abstract class Articulo extends BaseEntidad {
 
-    protected String denominacion;
-    protected Double precioVenta;
+    private String denominacion;
+    private Double precioVenta;
 
     private UnidadMedida unidadMedida;
     private Set<ImagenArticulo> imagenes;
